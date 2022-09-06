@@ -1,0 +1,41 @@
+// RTI Branding
+
+html {
+    font-size: 14px;
+}
+
+// card styles
+.card-body, .card-footer, .card-header, .card-title {
+    background-color: $card;
+}
+
+.card {
+    margin-top: 1rem ;
+    min-height: none ;
+    border: 0px solid;
+}
+
+// filter styles
+.filter-card {
+    background: rgba(91, 103, 112, 0.05);
+}
+
+input {
+    border: 1px solid $primary;
+}
+.form-control {
+    background-color: transparent ;
+}
+
+.btn {
+    text-decoration: underline;
+}
+
+.harness-ui-select {
+    width: 100%!important;
+}
+
+// nav styles 
+.nav-item>a, .navbar-brand {
+    color: white;
+}
