@@ -1,13 +1,12 @@
 import { shallowRef } from "vue";
 import exampleChart from "../components/exampleChart.vue";
 import examplePage from "../components/examplePage.vue";
-// import { components } from "@rtidatascience/harness-vue-bootstrap";
 export default class ExamplePage {
   title = "Example Page";
   key = "examplePage";
   pageComponent = examplePage;
   pageProps = {};
-  retrieveData = async (state, pageDefinition, hs) => {
+  loadData = async (state, pageDefinition, hs) => {
     return {
       exampleChart: [
         { key: "value1", key2: "value1" },
