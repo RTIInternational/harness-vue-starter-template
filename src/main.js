@@ -4,8 +4,9 @@ import { createPinia } from "pinia";
 import {
   harnessPlugin,
   harnessMixin,
-} from "../dev-packages/harness-vue/src/harness";
-// } from "@rtidatascience/harness-vue";
+// } from "../dev-packages/harness-vue/src/harness";
+// } from "../dev-packages/harness-vue/dist/harness-vue.es";
+} from "@rtidatascience/harness-vue";
 
 // import { harnessVueBootstrap } from "../dev-packages/harness-vue-bootstrap/src/harness-vue-bootstrap";
 import { harnessVueBootstrap } from "@rtidatascience/harness-vue-bootstrap";
@@ -17,13 +18,13 @@ import router from "./router";
 import "bootstrap";
 import "./styles/main.scss";
 
-const app = createApp(App);
 const pinia = createPinia();
-app.mixin(harnessMixin());
+const app = createApp(App);
+
 app.use(pinia);
 // note: router has to come after harness ?
 app.use(harnessPlugin, { pinia, router, pages });
+app.mixin(harnessMixin(pinia));
 app.use(harnessVueBootstrap);
 app.use(router);
-
 app.mount("#app");
