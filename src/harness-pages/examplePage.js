@@ -127,7 +127,7 @@ export default class ExamplePage {
         component: "ChartWithTable",
         props: {
           chartComponent: shallowRef(exampleChart),
-          tableAdapter: function (chart, filters, data) {
+          tableAdapter: function (chart, filters, data, pageStore) {
             const map = {
               key: "Transformed key",
               key2: "Transformed key 2",

@@ -1,0 +1,3 @@
+### Harness-Vue-Starter-Template CI/CD
+
+This basic CI/CD setup for Github Actions includes linting, testing, and deployment to Amazon S3/Cloudfront as described in our deployment example. In order to use this CI/CD, copy the `Dockerfile` to the root of your repository, and copy the `ci.yml` file to `/github/workflows`. The deployment portion of this CI/CD template uses [Github Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets) to manage information about your Amazon AWS account.

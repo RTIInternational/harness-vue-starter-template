@@ -1,19 +1,12 @@
 {
-  "name": "harness-starter-template-2",
+  "name": "harness-vue-starter-template",
   "version": "0.0.0",
-  "main": "./dist/harness-ui.common.js",
-  "files": [
-    "dist/*",
-    "src/*",
-    "*.json",
-    "*.js"
-  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173",
-    "test:unit": "vitest --environment jsdom",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "test": "vitest run",
+    "lint": "eslint . --ext .vue,.js --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "@rtidatascience/harness-vue": "^0.2.1",
