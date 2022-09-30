@@ -1,10 +1,7 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 
-import {
-  harnessPlugin,
-  harnessMixin,
-} from "@rtidatascience/harness-vue";
+import { harnessPlugin, harnessMixin } from "@rtidatascience/harness-vue";
 
 import { harnessVueBootstrap } from "@rtidatascience/harness-vue-bootstrap";
 import pages from "./harness-pages/manifest";

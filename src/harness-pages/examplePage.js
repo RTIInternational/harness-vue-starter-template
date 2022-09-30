@@ -6,7 +6,7 @@ export default class ExamplePage {
   key = "examplePage";
   pageComponent = examplePage;
   pageProps = {};
-  loadData = async (state, pageDefinition, hs) => {
+  loadData = async () => {
     return {
       exampleChart: [
         { key: "value1", key2: "value1" },
@@ -127,7 +127,7 @@ export default class ExamplePage {
         component: "ChartWithTable",
         props: {
           chartComponent: shallowRef(exampleChart),
-          tableAdapter: function (chart, filters, data, pageStore) {
+          tableAdapter: function (chart, filters, data) {
             const map = {
               key: "Transformed key",
               key2: "Transformed key 2",
