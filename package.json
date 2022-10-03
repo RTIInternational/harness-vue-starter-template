@@ -9,7 +9,7 @@
     "lint": "eslint . --ext .vue,.js --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@rtidatascience/harness-vue": "^1.0.0",
+    "@rtidatascience/harness-vue": "1.1",
     "@rtidatascience/harness-vue-bootstrap": "^1.0.0",
     "pinia": "^2.0.17",
     "vue": "^3.2.37",
