@@ -88,35 +88,6 @@ export default class ExamplePage {
           },
         ],
       },
-      exampleCheckboxGroup: {
-        key: "exampleCheckboxGroup",
-        label: "Example Checkbox Group",
-        component: "HarnessVueBootstrapCheckboxGroup",
-        options: [
-          {
-            key: "exampleOption",
-            label: "Example Option",
-            default: true,
-          },
-          {
-            key: "exampleOption2",
-            label: "Example Option2",
-          },
-          {
-            key: "exampleOption3",
-            label: "Example Option3",
-          },
-          {
-            key: "exampleOption4",
-            label: "Example Option4",
-          },
-        ],
-        props: {
-          multiple: true,
-          labelPosition: "vertical",
-          collapse: true,
-        },
-      },
     };
   };
 
@@ -139,7 +110,7 @@ export default class ExamplePage {
                   acc[map[key]] =
                     datum[key].toUpperCase() + " TRANSFORMED UPPERCASE";
                   return acc;
-                }, {})
+                }, {}),
               );
             });
             return newData;
