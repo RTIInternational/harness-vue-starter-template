@@ -67,16 +67,38 @@ export default class ExamplePage {
         key: "exampleInput",
         label: "Example Input",
         component: "HarnessVueBootstrapInput",
-        options: [
-          {
-            key: "value",
-          },
-        ],
+        options: [],
+        props: {
+          type: "number",
+          prependHTML: "$",
+          appendHTML: ".00",
+          min: 0,
+          max: 10,
+          step: 1,
+        },
       },
-      exampleRadioGroup: {
-        key: "exampleRadioGroup",
-        label: "Example Radio Group",
-        component: "HarnessVueBootstrapRadioGroup",
+      exampleInputFloat: {
+        key: "exampleInputFloat",
+        label: "Example Input",
+        component: "HarnessVueBootstrapInput",
+        options: [],
+        props: { labelPosition: "floating" },
+      },
+      exampleInputDatalist: {
+        key: "exampleInputDatalist",
+        label: "Example Input",
+        component: "HarnessVueBootstrapInput",
+        options: [
+          { key: "", label: "" },
+          { key: "foo", label: "foo" },
+          { key: "bar", label: "bar" },
+        ],
+        props: { datalist: true },
+      },
+      exampleCheckboxGroup: {
+        key: "exampleCheckboxGroup",
+        label: "Example Checkbox Group",
+        component: "HarnessVueBootstrapCheckboxGroup",
         options: [
           {
             key: "exampleOption",
@@ -87,6 +109,46 @@ export default class ExamplePage {
             label: "Example Option2",
           },
         ],
+        props: {
+          multiple: true,
+        },
+      },
+      exampleRadioGroup: {
+        key: "exampleRadioGroup",
+        label: "Example Radio Group",
+        component: "HarnessVueBootstrapCheckboxGroup",
+        options: [
+          {
+            key: "exampleOption",
+            label: "Example Option",
+          },
+          {
+            key: "exampleOption2",
+            label: "Example Option2",
+          },
+        ],
+        props: {
+          type: "radio",
+        },
+      },
+      exampleSwitchGroup: {
+        key: "exampleSwitchGroup",
+        label: "Example Switch Group",
+        component: "HarnessVueBootstrapCheckboxGroup",
+        options: [
+          {
+            key: "exampleOption",
+            label: "Example Option",
+          },
+          {
+            key: "exampleOption2",
+            label: "Example Option2",
+          },
+        ],
+        props: {
+          type: "switch",
+          multiple: true,
+        },
       },
     };
   };
