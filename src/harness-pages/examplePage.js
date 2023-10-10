@@ -23,6 +23,7 @@ export default class ExamplePage {
         key: "exampleSelect",
         label: "Example Select",
         component: "harnessVueBootstrapSelect",
+        valueType: "string",
         options: [
           {
             key: "exampleOption",
@@ -38,13 +39,22 @@ export default class ExamplePage {
             label: "Example Option 3",
           },
         ],
+        props: {
+          allowValidation: true,
+          validFeedback: "foo",
+        },
       },
       exampleMultiSelect: {
         key: "exampleMultiSelect",
         label: "Example Multiselect",
         component: "harnessVueBootstrapSelect",
+        valueValidator: (harness, value) => value.length > 1,
         props: {
           multiple: true,
+          allowValidation: true,
+          showValid: true,
+          validFeedback: "foo",
+          invalidFeedback: "Choose more than 1",
         },
         options: [
           {
@@ -68,6 +78,7 @@ export default class ExamplePage {
         label: "Example Input",
         component: "HarnessVueBootstrapInput",
         options: [],
+        valueType: "number",
         props: {
           type: "number",
           prependHTML: "$",
@@ -75,14 +86,19 @@ export default class ExamplePage {
           min: 0,
           max: 10,
           step: 1,
+          required: true,
         },
       },
       exampleInputFloat: {
         key: "exampleInputFloat",
         label: "Example Input",
         component: "HarnessVueBootstrapInput",
+        valueType: "number",
         options: [],
-        props: { labelPosition: "floating" },
+        props: {
+          labelPosition: "floating",
+          required: true,
+        },
       },
       exampleInputDatalist: {
         key: "exampleInputDatalist",
@@ -108,9 +124,19 @@ export default class ExamplePage {
             key: "exampleOption2",
             label: "Example Option2",
           },
+          {
+            key: "exampleOption3",
+            label: "Example Option2",
+          },
+          {
+            key: "exampleOption4",
+            label: "Example Option2",
+          },
         ],
+        valueValidator: (harness, value) => value.length > 1,
         props: {
           multiple: true,
+          allowValidation: true,
         },
       },
       exampleRadioGroup: {
