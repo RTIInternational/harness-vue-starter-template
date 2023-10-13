@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@rtidatascience/harness-vue": "^1.5.1",
-    "@rtidatascience/harness-vue-bootstrap": "^2.1.0",
+    "@rtidatascience/harness-vue-bootstrap": "^2.1.1",
     "bootstrap": "^5.3.1",
     "pinia": "^2.0.17",
     "vue": "^3.2.37",

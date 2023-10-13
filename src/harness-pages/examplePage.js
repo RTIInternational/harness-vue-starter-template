@@ -137,6 +137,10 @@ export default class ExamplePage {
         props: {
           multiple: true,
           allowValidation: true,
+          // showValid: true,
+          // showInvalid: false,
+          invalidFeedback: "woo",
+          validFeedback: "wow",
         },
       },
       exampleRadioGroup: {
