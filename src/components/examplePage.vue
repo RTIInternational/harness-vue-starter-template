@@ -12,11 +12,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "ExamplePage",
-};
-</script>
+<script setup></script>
 <style scoped>
 .card {
   margin-top: 1rem;

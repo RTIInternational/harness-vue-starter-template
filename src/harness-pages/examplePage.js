@@ -20,7 +20,6 @@ export default class ExamplePage {
   filters = function () {
     return {
       exampleSelect: {
-        key: "exampleSelect",
         label: "Example Select",
         component: "harnessVueBootstrapSelect",
         valueType: "string",
@@ -45,7 +44,6 @@ export default class ExamplePage {
         },
       },
       exampleMultiSelect: {
-        key: "exampleMultiSelect",
         label: "Example Multiselect",
         component: "harnessVueBootstrapSelect",
         valueValidator: (harness, value) => value.length > 1,
@@ -74,7 +72,6 @@ export default class ExamplePage {
         ],
       },
       exampleInput: {
-        key: "exampleInput",
         label: "Example Input",
         component: "HarnessVueBootstrapInput",
         options: [],
@@ -90,7 +87,6 @@ export default class ExamplePage {
         },
       },
       exampleInputFloat: {
-        key: "exampleInputFloat",
         label: "Example Input",
         component: "HarnessVueBootstrapInput",
         valueType: "number",
@@ -101,7 +97,6 @@ export default class ExamplePage {
         },
       },
       exampleInputDatalist: {
-        key: "exampleInputDatalist",
         label: "Example Input",
         component: "HarnessVueBootstrapInput",
         options: [
@@ -112,7 +107,6 @@ export default class ExamplePage {
         props: { datalist: true },
       },
       exampleCheckboxGroup: {
-        key: "exampleCheckboxGroup",
         label: "Example Checkbox Group",
         component: "HarnessVueBootstrapCheckboxGroup",
         options: [
@@ -144,7 +138,6 @@ export default class ExamplePage {
         },
       },
       exampleRadioGroup: {
-        key: "exampleRadioGroup",
         label: "Example Radio Group",
         component: "HarnessVueBootstrapCheckboxGroup",
         options: [
@@ -162,7 +155,6 @@ export default class ExamplePage {
         },
       },
       exampleSwitchGroup: {
-        key: "exampleSwitchGroup",
         label: "Example Switch Group",
         component: "HarnessVueBootstrapCheckboxGroup",
         options: [

@@ -4,7 +4,7 @@
       <h5>Chart Data</h5>
       <pre>
         <code>
-          {{ harness.getChartData(chart.key) }}
+          {{ harness.getChartData(props.chart.key) }}
         </code>
       </pre>
     </div>
@@ -14,10 +14,7 @@
         <li v-for="(filter, idx) in harness.filters" :key="idx">
           <strong>{{ filter.label }}</strong
           >:
-          {{
-            harness.getLabelForSelectedOption(filter.key) ||
-            harness.getFilter(filter.key)
-          }}
+          {{ harness.getLabelForSelectedOption(idx) || harness.getFilter(idx) }}
         </li>
       </ul>
     </div>
@@ -27,7 +24,7 @@
 <script setup>
 import { defineProps } from "vue";
 import { useHarnessComposable } from "@rtidatascience/harness-vue";
-defineProps({
+const props = defineProps({
   chart: {
     type: Object,
     required: true,

@@ -4,8 +4,11 @@ import { createPinia } from "pinia";
 import router from "./router";
 
 // harness-vue imports
-import { harnessPlugin, harnessMixin } from "@rtidatascience/harness-vue";
-import { harnessVueBootstrap } from "@rtidatascience/harness-vue-bootstrap";
+// import { harnessPlugin } from "@rtidatascience/harness-vue";
+
+// import { harnessVueBootstrap } from "@rtidatascience/harness-vue-bootstrap";
+import { harnessPlugin } from "../dev-packages/harness-vue/src/harness";
+import { harnessVueBootstrap } from "../dev-packages/harness-vue-bootstrap/src/harness-vue-bootstrap";
 import pages from "./harness-pages/manifest";
 
 // import style entrypoint
@@ -33,9 +36,6 @@ app.use(harnessVueBootstrap);
 
 // install vue-router
 app.use(router);
-
-// install the global mixin for options API
-app.mixin(harnessMixin(pinia));
 
 // mount the application to the dom
 app.mount("#app");
