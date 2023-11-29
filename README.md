@@ -24,3 +24,31 @@ This starter template includes the following:
 * An example chart component using the composition API and the [Harness-Vue composable](https://harnessjs.org/introduction/getting-started.html#composable)
 * Documentation on CI/CD best practices and examples located under `ci-examples`
 * Documentation on and examples of dockerized and/or static site deployment located under `deployment`
+
+
+## Removing Vue Router
+If you'd like to run this application without vue-router (for apps that only require a single harness page and want easier integration), do the following:
+* `npm remove vue-router` to remove the dependency
+* in `main.js`, remove `vue-router` from the app and from harness
+    * remove the line that reads `import router from "./router";`
+    * remove the line that reads `app.use(router);`
+    * change the line that reads `app.use(harnessPlugin, { pinia, router, pages });` to `app.use(harnessPlugin, { pinia, pages });`
+* change the contents of `App.vue` to the following:
+
+```vue
+<script setup>
+import { useHarnessComposable } from "@rtidatascience/harness-vue";
+import { onBeforeMount } from "vue";
+const harness = useHarnessComposable();
+onBeforeMount(() => {
+  harness.loadData();
+});
+</script>
+<template>
+  <div id="app">
+    <component :is="harness.getPageDefinition.pageComponent" />
+  </div>
+</template>
+```
+
+This uses the page component specified by your harness-vue page definition, and runs `loadData` before mount similar to how it is run in a router navigation guard in apps that use vue-router.
