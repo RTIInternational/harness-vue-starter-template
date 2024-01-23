@@ -4,11 +4,8 @@ import { createPinia } from "pinia";
 import router from "./router";
 
 // harness-vue imports
-// import { harnessPlugin } from "@rtidatascience/harness-vue";
-
-// import { harnessVueBootstrap } from "@rtidatascience/harness-vue-bootstrap";
-import { harnessPlugin } from "../dev-packages/harness-vue/src/harness";
-import { harnessVueBootstrap } from "../dev-packages/harness-vue-bootstrap/src/harness-vue-bootstrap";
+import { harnessPlugin } from "@rtidatascience/harness-vue";
+import { harnessVueBootstrap } from "@rtidatascience/harness-vue-bootstrap";
 import pages from "./harness-pages/manifest";
 
 // import style entrypoint
