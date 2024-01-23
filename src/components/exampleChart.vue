@@ -1,3 +1,15 @@
+<script setup>
+import { defineProps } from "vue";
+import { useHarnessComposable } from "@rtidatascience/harness-vue";
+const props = defineProps({
+  chart: {
+    type: Object,
+    required: true,
+  },
+});
+const harness = useHarnessComposable();
+</script>
+
 <template>
   <div class="row">
     <div class="col">
@@ -20,15 +32,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { defineProps } from "vue";
-import { useHarnessComposable } from "@rtidatascience/harness-vue";
-const props = defineProps({
-  chart: {
-    type: Object,
-    required: true,
-  },
-});
-const harness = useHarnessComposable();
-</script>

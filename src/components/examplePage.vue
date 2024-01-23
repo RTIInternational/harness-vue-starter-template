@@ -1,3 +1,4 @@
+<script setup></script>
 <template>
   <div class="container">
     <div class="card filter-card">
@@ -7,14 +8,6 @@
       </div>
     </div>
     <br />
-
     <chartGrid />
   </div>
 </template>
-
-<script setup></script>
-<style scoped>
-.card {
-  margin-top: 1rem;
-}
-</style>
