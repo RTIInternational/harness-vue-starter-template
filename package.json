@@ -22,7 +22,7 @@
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/test-utils": "^2.0.2",
     "eslint": "^8.21.0",
-    "eslint-plugin-vue": "^9.3.0",
+    "eslint-plugin-vue": "^9.30.0",
     "jsdom": "^24.0.0",
     "prettier": "^3.0.0",
     "sass": "^1.54.6",
