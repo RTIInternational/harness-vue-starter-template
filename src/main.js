@@ -5,13 +5,13 @@ import router from "./router";
 
 // harness-vue imports
 import { harnessPlugin } from "@rtidatascience/harness-vue";
-import { harnessVueBootstrap } from "@rtidatascience/harness-vue-bootstrap";
+import { harnessVueUSWDS } from "../../harness-vue-uswds/";
 import pages from "./harness-pages/manifest";
 
 // import style entrypoint
 import "./styles/main.scss";
 // import bootstrap's javascript
-import "bootstrap";
+//import "bootstrap";
 
 // import main app component
 import App from "./App.vue";
@@ -29,7 +29,7 @@ app.use(pinia);
 app.use(harnessPlugin, { pinia, router, pages });
 
 // install harness-vue-bootstrap
-app.use(harnessVueBootstrap);
+app.use(harnessVueUSWDS);
 
 // install vue-router
 app.use(router);

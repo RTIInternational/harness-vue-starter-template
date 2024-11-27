@@ -1,6 +1,18 @@
+// Include a USWDS settings file (required)
+@forward "_uswds-theme.scss";
+
+// Point to the USWDS source code (required)
+@forward "usa-icon-list";
+@forward "usa-icon";
+@forward "~uswds/packages/uswds";
+
 @import '_rti_variables';
 
-@import 'bootstrap/scss/bootstrap.scss';
-@import 'bootstrap-icons/font/bootstrap-icons.css';
 
 @import '_rti';
+
+@font-face {
+    font-family: "Public Sans";
+    src: url("~uswds/dist/fonts/public-sans/PublicSans-Regular.ttf")
+      format("truetype");
+  }

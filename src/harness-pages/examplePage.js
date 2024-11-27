@@ -27,7 +27,7 @@ export default class ExamplePage {
     return {
       exampleSelect: {
         label: "Example Select",
-        component: "harnessVueBootstrapSelect",
+        component: "harnessVueUSWDSSelect",
         valueType: "string",
         defaultValue: 'exampleOption3',
         options: [
@@ -52,7 +52,7 @@ export default class ExamplePage {
       },
       exampleMultiSelect: {
         label: "Example Multiselect",
-        component: "harnessVueBootstrapSelect",
+        component: "harnessVueUSWDSSelect",
         valueValidator: (harness, value) => value.length > 1,
         props: {
           multiple: true,

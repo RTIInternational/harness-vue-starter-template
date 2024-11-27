@@ -1,0 +1,31 @@
+// see the settings we can change here
+// https://designsystem.digital.gov/documentation/settings/#general-settings
+
+@use "uswds-core" with (
+  $theme-typeface-tokens: (
+     "proxima-nova": (
+      "display-name": "Proxima Nova",
+      // or other font
+      "cap-height": 364px,
+      // the default, leave it for now
+      "stack": "proxima-nova, serif, sans-serif",
+      // or whatever stack you want
+    ), 
+  ),
+
+  $theme-image-path: "~uswds/dist/img",
+  $theme-font-path: "~uswds/dist/fonts",
+  $theme-show-compile-warnings: false,
+  $theme-show-notifications: false,
+  $theme-banner-background-color: "ink",
+  $theme-banner-link-color: "primary-light",
+  $theme-banner-max-width: "widescreen",
+  $theme-checkbox-border-radius: "md",
+  $theme-font-type-sans: "proxima-nova",
+  $theme-type-scale-sm: 5,
+  $theme-body-font-size: "sm",
+  $theme-body-line-height: 5,
+  $theme-color-primary-family: "#1E4F96",
+  $theme-root-font-size: 10px,
+  $theme-card-border-width: 0
+);
