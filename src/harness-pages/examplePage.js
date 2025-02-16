@@ -6,11 +6,11 @@ export default class ExamplePage {
   key = "examplePage";
   pageComponent = examplePage;
   pageProps = {};
-  routePath=`example-page`
-  routeBeforeEnter(to, from, next, store){
-    store.initializeDefaults()
-    store.loadData()
-    next()
+  routePath = `example-page`;
+  routeBeforeEnter(to, from, next, store) {
+    store.initializeDefaults();
+    store.loadData();
+    next();
   }
   loadData = async () => {
     return {
@@ -29,7 +29,7 @@ export default class ExamplePage {
         label: "Example Select",
         component: "harnessVueBootstrapSelect",
         valueType: "string",
-        defaultValue: 'exampleOption3',
+        defaultValue: "exampleOption3",
         options: [
           {
             key: "exampleOption",
